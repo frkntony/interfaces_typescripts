@@ -104,14 +104,10 @@ request(requestOption, (err, res) => {
       }
 
       /** соединение массива в большой string. каждый элемент новая строчка. */
-      let tmpInterfaceTwo = tmpInterface.join("\r\n")
+      tmpInterface = tmpInterface.join("\r\n")
 
-      // console.log(tmpInterfaceTwo)
       /** мутация интерфейса */
-      sFinalInterface = (sFinalInterface === "") ? tmpInterfaceTwo : sFinalInterface += NEW_LINE + tmpInterfaceTwo
-      // sFinalInterface = NEW_LINE + tmpInterfaceTwo
-
-
+      sFinalInterface = (sFinalInterface === "") ? tmpInterface : sFinalInterface += NEW_LINE + tmpInterface
     })
 
     /** создание папки для интерфейсов */
